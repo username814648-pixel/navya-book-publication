@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navya Book Publication</title>
+<meta name="description" content="Navya Book Publication — bringing stories, knowledge and ideas to readers.">
+<style>
+:root{--ink:#17202a;--gold:#b8863b;--cream:#fbf7ef;--paper:#fffdf8;--muted:#6d6a64}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;color:var(--ink);background:var(--cream);line-height:1.6}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.96);border-bottom:1px solid #eadfce;display:flex;justify-content:space-between;align-items:center;padding:16px 7%;backdrop-filter:blur(10px)}
+.logo{font-size:25px;font-weight:700;letter-spacing:.5px}.logo span{color:var(--gold)}
+nav a{color:var(--ink);text-decoration:none;margin-left:24px;font-family:Arial,sans-serif;font-size:14px}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:80px 7%;background:radial-gradient(circle at 50% 25%,#fffdf8 0,#f6ead6 45%,#ead9be 100%)}
+.hero .badge{font:600 12px Arial,sans-serif;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(44px,8vw,86px);line-height:1.02;margin:18px 0}
+.hero p{max-width:680px;margin:0 auto 30px;color:#59554e;font-size:19px}
+.btn{display:inline-block;padding:13px 23px;background:var(--ink);color:white;text-decoration:none;border-radius:4px;font-family:Arial,sans-serif;font-weight:700;margin:5px}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+section{padding:75px 7%;max-width:1200px;margin:auto}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title small{font:700 12px Arial,sans-serif;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+.section-title h2{font-size:40px;margin-top:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-card{background:var(--paper);padding:36px;border:1px solid #eadfce;box-shadow:0 15px 35px rgba(75,52,25,.08)}
+.about-card h3{font-size:28px;margin-bottom:12px}.about p{color:var(--muted)}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.book{background:var(--paper);border:1px solid #eadfce;padding:18px;transition:.2s}.book:hover{transform:translateY(-5px)}
+.cover{height:270px;background:linear-gradient(145deg,#273746,#b8863b);display:grid;place-items:center;color:#fff;text-align:center;padding:25px;font-size:25px;box-shadow:inset 0 0 0 8px rgba(255,255,255,.08)}
+.book h3{margin-top:17px;font-size:22px}.book p{color:var(--muted);font-size:14px}.price{font:700 15px Arial,sans-serif;color:var(--gold);margin-top:8px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{padding:28px;background:#fff;border:1px solid #eadfce}.service b{font-size:20px}.service p{color:var(--muted);margin-top:8px}
+form{max-width:700px;margin:auto;background:#fff;padding:35px;border:1px solid #eadfce}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+label{font:700 13px Arial,sans-serif;display:block;margin-bottom:6px}input,textarea{width:100%;padding:12px;border:1px solid #d9cdbb;background:#fffdf9;font:15px Arial,sans-serif}textarea{min-height:130px;resize:vertical}.full{grid-column:1/-1}
+button{border:0;cursor:pointer;width:100%;margin-top:18px;padding:14px;background:var(--ink);color:#fff;font-weight:700}
+.contact{background:var(--ink);color:white;max-width:none}.contact-inner{max-width:1050px;margin:auto;text-align:center;padding:75px 7%}.contact p{color:#d6d2cb}.contact a{color:#f0c77e}
+footer{background:#10161b;color:#bfc3c6;text-align:center;padding:22px;font:13px Arial,sans-serif}
+@media(max-width:800px){nav{padding:14px 5%}nav div:last-child{display:none}.about,.books,.services{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:55px 5%}.hero{min-height:70vh}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Navya <span>Book Publication</span></div>
+  <div>
+    <a href="#home">Home</a><a href="#books">Books</a><a href="#about">About</a>
+    <a href="#publish">Publish With Us</a><a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div>
+    <div class="badge">Ideas • Stories • Knowledge</div>
+    <h1>Where Every Story<br>Finds Its Voice.</h1>
+    <p>Navya Book Publication is a modern publishing house dedicated to helping authors bring meaningful books to readers.</p>
+    <a class="btn" href="#books">Explore Books</a>
+    <a class="btn alt" href="#publish">Publish Your Book</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="section-title"><small>Who We Are</small><h2>About Navya</h2></div>
+  <div class="about">
+    <div>
+      <h3>Publishing with purpose.</h3>
+      <p>We believe good books can inform, inspire and create lasting connections. Navya Book Publication works with writers to turn manuscripts into polished publications.</p>
+      <br><p>From editorial support to book presentation and distribution, our goal is to make the publishing journey simple and professional.</p>
+    </div>
+    <div class="about-card"><h3>Our Vision</h3><p>To create a trusted platform where new voices, established authors and readers meet through quality books.</p></div>
+  </div>
+</section>
+
+<section id="books">
+  <div class="section-title"><small>Featured Collection</small><h2>Our Books</h2></div>
+  <div class="books">
+    <article class="book"><div class="cover">THE<br>ART OF<br>BEGINNING</div><h3>The Art of Beginning</h3><p>Author: Your Author Name</p><div class="price">₹299</div></article>
+    <article class="book"><div class="cover">WORDS<br>THAT<br>REMAIN</div><h3>Words That Remain</h3><p>Author: Your Author Name</p><div class="price">₹349</div></article>
+    <article class="book"><div class="cover">BEYOND<br>THE<br>PAGE</div><h3>Beyond the Page</h3><p>Author: Your Author Name</p><div class="price">₹399</div></article>
+  </div>
+</section>
+
+<section>
+  <div class="section-title"><small>What We Offer</small><h2>Publishing Services</h2></div>
+  <div class="services">
+    <div class="service"><b>Editorial Support</b><p>Professional editing and proofreading to improve clarity and presentation.</p></div>
+    <div class="service"><b>Book Design</b><p>Clean interiors and attractive covers designed for print and digital readers.</p></div>
+    <div class="service"><b>Publication Support</b><p>Guidance through publishing, author onboarding and book launch preparation.</p></div>
+  </div>
+</section>
+
+<section id="publish">
+  <div class="section-title"><small>For Authors</small><h2>Publish With Us</h2></div>
+  <form onsubmit="submitForm(event)">
+    <div class="grid">
+      <div><label>Full Name</label><input required placeholder="Your name"></div>
+      <div><label>Mobile Number</label><input required type="tel" placeholder="+91"></div>
+      <div><label>Email</label><input required type="email" placeholder="you@example.com"></div>
+      <div><label>Book Title</label><input required placeholder="Your book title"></div>
+      <div class="full"><label>About Your Manuscript</label><textarea required placeholder="Tell us briefly about your book..."></textarea></div>
+    </div>
+    <button type="submit">Submit Manuscript Enquiry</button>
+    <p id="formMsg" style="text-align:center;margin-top:12px;color:#8a652b;font-family:Arial,sans-serif"></p>
+  </form>
+</section>
+
+<div class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-title"><small>Get In Touch</small><h2 style="color:white">Let's Publish Together</h2></div>
+    <p>Email: <a href="mailto:info@navyabookpublication.com">info@navyabookpublication.com</a></p>
+    <p>Phone / WhatsApp: <a href="tel:+910000000000">+91 00000 00000</a></p>
+    <p style="margin-top:16px">Replace these sample details with your official contact information.</p>
+  </div>
+</div>
+
+<footer>© 2026 Navya Book Publication. All rights reserved.</footer>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('formMsg').textContent =
+    'Thank you! Your enquiry form is ready. Connect this form to your email/WhatsApp/backend to receive submissions.';
+}
+</script>
+</body>
+</html>

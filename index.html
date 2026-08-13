@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navya Publication</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#f5f7ff;
+color:#222;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:15px 8%;
+background:#6a11cb;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+border-radius:50%;
+background:white;
+padding:5px;
+}
+
+.logo h2{
+color:white;
+font-size:24px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:500;
+}
+
+.hero{
+padding-top:120px;
+padding-bottom:80px;
+text-align:center;
+background:linear-gradient(135deg,#6a11cb,#2575fc);
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#2575fc;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#ffd54f;
+color:black;
+}
+
+.section{
+padding:70px 8%;
+}
+
+.title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+color:#6a11cb;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#2575fc;
+margin-bottom:15px;
+}
+
+.card p{
+margin:8px 0;
+}
+
+.price{
+font-size:24px;
+font-weight:bold;
+color:#6a11cb;
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png.png">
+<h2>Navya Publication</h2>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#projects">Projects</a>
+<a href="#payment">Payment</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Work From Home Handwriting Project</h1>
+
+<p>Join our handwriting project and earn up to 35,000.</p>
+
+<a class="btn" href="#projects">Apply Now</a>
+
+</section>
+
+<section class="section" id="projects">
+
+<h2 class="title">Available Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>7 Days Project</h3>
+<p>Salary : 25,000</p>
+<p>Pages : 49</p>
+<p>Per Day : 7 Pages</p>
+<div class="price">Registration 499</div>
+</div>
+
+<div class="card">
+<h3>10 Days Project</h3>
+<p>Salary : 30,000</p>
+<p>Pages : 100</p>
+<p>Per Day : 10 Pages</p>
+<div class="price">Registration 799</div>
+</div>
+
+<div class="card">
+<h3>15 Days Project</h3>
+<p>Salary : 35,000</p>
+<p>Pages : 150</p>
+<p>Per Day : 10 Pages</p>
+<div class="price">Registration 999</div>
+</div>
+
+</div>
+
+</section><section class="section">
+
+<h2 class="title">Application Form</h2>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input id="name" type="text" placeholder="Full Name" required><br><br>
+
+<input id="mobile" type="tel" placeholder="Mobile Number" required><br><br>
+
+<input id="house" type="text" placeholder="House No." required><br><br>
+
+<input id="area" type="text" placeholder="Area Name" required><br><br>
+
+<input id="city" type="text" placeholder="City" required><br><br>
+
+<input id="district" type="text" placeholder="District" required><br><br>
+
+<input id="pincode" type="number" placeholder="Pin Code" required><br><br>
+
+<input id="state" type="text" placeholder="State" required><br><br>
+
+<select id="project" required>
+<option value="">Select Project</option>
+<option>7 Days Project - 499</option>
+<option>10 Days Project - 799</option>
+<option>15 Days Project - 999</option>
+</select>
+
+<br><br>
+
+<button class="btn" type="submit">Submit Application</button>
+
+</form>
+
+</section>
+
+<script>
+
+function sendWhatsApp(){
+
+var msg=
+" *New Application*%0A%0A"+
+"1. Full Name : "+document.getElementById('name').value+"%0A"+
+"2. Mobile No : "+document.getElementById('mobile').value+"%0A"+
+"3. House No : "+document.getElementById('house').value+"%0A"+
+"4. Area Name : "+document.getElementById('area').value+"%0A"+
+"5. City : "+document.getElementById('city').value+"%0A"+
+"6. District : "+document.getElementById('district').value+"%0A"+
+"7. Pin Code : "+document.getElementById('pincode').value+"%0A"+
+"8. State : "+document.getElementById('state').value+"%0A"+
+"9. Project : "+document.getElementById('project').value;
+
+window.open("https://wa.me/918146484226?text="+msg);
+
+}
+
+</script><section id="payment" class="section" style="background:#6a11cb;color:white;">
+
+<h2 class="title" style="color:white;">Registration Payment</h2>
+
+<div style="text-align:center;">
+
+<img src="payment-qr.png.jpg"
+style="width:280px;max-width:90%;background:white;padding:15px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.3);">
+
+<p style="margin-top:20px;font-size:18px;">
+Scan the QR Code and Pay Registration Fee
+</p>
+
+<a href="https://wa.me/918146484226"
+style="display:inline-block;margin-top:20px;padding:15px 35px;background:#25D366;color:white;text-decoration:none;border-radius:50px;font-weight:bold;">
+Send Payment Screenshot
+</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="title">Why Choose Navya Publication?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3> Weekly Payment</h3>
+<p>Get paid after successful project completion.</p>
+</div>
+
+<div class="card">
+<h3> Work From Home</h3>
+<p>No office visit required.</p>
+</div>
+
+<div class="card">
+<h3> Easy Registration</h3>
+<p>Simple process with quick support.</p>
+</div>
+
+</div>
+
+</section>
+<!-- ===== Testimonials ===== -->
+<section class="section" style="background:#f7f7ff;">
+  <h2 class="title">What Our Members Say</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3></h3>
+      <p>"Simple registration process and good support."</p>
+      <b>- Rahul</b>
+    </div>
+
+    <div class="card">
+      <h3></h3>
+      <p>"Easy work from home project with clear instructions."</p>
+      <b>- Priya</b>
+    </div>
+
+    <div class="card">
+      <h3></h3>
+      <p>"Professional website and helpful team."</p>
+      <b>- Aman</b>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section">
+  <h2 class="title">Frequently Asked Questions</h2>
+
+  <div class="card">
+    <h3>How do I apply?</h3>
+    <p>Select a project, complete the registration process, and follow the instructions provided.</p>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h3>How is payment made?</h3>
+    <p>Payment details and process are shared after registration and successful completion of the assigned work.</p>
+  </div>
+
+  <div class="card" style="margin-top:20px;">
+    <h3>Need Help?</h3>
+    <p>Contact us on WhatsApp for assistance.</p>
+  </div>
+</section>
+
+<!-- ===== Floating WhatsApp Button ===== -->
+<a href="https://wa.me/918146484226?text=Hello%20Navya%20Publication%2C%20I%20want%20to%20join%20the%20Handwriting%20Project."
+style="
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:28px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+z-index:9999;">
+
+</a>
+
+<footer style="background:#111;color:white;padding:40px;text-align:center;">
+
+<h2>Navya Publication</h2>
+
+<p>Professional Handwriting Projects</p>
+
+<p style="margin-top:10px;">
+© 2026 All Rights Reserved.
+</p>
+
+</footer>
+
+<style>
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+display:none;
+}
+
+.logo h2{
+font-size:20px;
+}
+
+}
+
+</style>
+
+</body>
+</html>
